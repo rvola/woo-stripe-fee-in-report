@@ -1,16 +1,24 @@
-# WooCommerce Stripe fee in Report
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/rvola)
+=== WooCommerce Stripe fee in Report ===
+Contributors: rvola
+Donate link: https://www.paypal.me/rvola
+Tags: stripe, woocommerce, woocommerce-plugin, woocommerce-extension, wordpress-plugin, wordpress, chart, reporting, report, stripe-payments, stripe-gateway
+Requires PHP: 5.3
+Requires at least: 4.4
+Tested up to: 4.9
+Stable tag: 1.0.0
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 Shows Stripe charges in WooCommerce charts. Calculates a correct net total.
 
-![banner](/.github/banner.jpg)
-
-## Description
+== Description ==
 
 **WooCommerce Stripe fee in Report** is a small addon that will allow you to quickly visualize in the WooCommerce graph, the state of your comissions Stripe !!
 It's simple and it works.
 
-## Installation
+[**GitHub**](https://github.com/rvola/woo-stripe-fee-report) | [**Donate**](https://www.paypal.me/rvola)
+
+== Installation ==
 
 This section describes how to install the plugin and get it working.
 
@@ -18,16 +26,14 @@ This section describes how to install the plugin and get it working.
 2. Activate the plugin through the 'Plugins' screen in WordPress.
 3. Enjoy !
 
-## Requirement
+== Requirement ==
 
 * PHP minimal: **5.3**
 * WordPress minimal: **4.4**
 * WooCommerce minimal : **3.1.0**
 * WooCommerce Gateway Stripe minimal : **3.0.0**
 
-## Links
+== Changelog ==
 
-* [**Changelog**](https://github.com/rvola/woo-stripe-fee-report/blob/master/CHANGELOG.md)
-* [**Download on WordPress**](https://wordpress.org/plugins/woo-stripe-fee-report/)
-
-
+= 1.0.0 / 2018-02-24 =
+* Launch

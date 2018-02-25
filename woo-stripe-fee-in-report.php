@@ -5,8 +5,8 @@ Plugin URI:			    https://github.com/rvola/woo-stripe-fee-in-report
 
 Description:		    Shows Stripe fees in WooCommerce charts. Calculates a correct net total.
 
-Version:			    1.0.0
-Revision:			    2018-02-24
+Version:			    1.0.1
+Revision:			    2018-02-25
 Creation:               2018-02-24
 
 Author:				    studio RVOLA

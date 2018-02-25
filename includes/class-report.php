@@ -291,7 +291,7 @@ class Report extends \WC_Admin_Report {
                     var stripe_series = {
                         label: "<?php echo esc_js( __( 'Stripe fees', 'woo-stripe-fee-in-report' ) ) ?>",
                         data: <?php echo $stripe_fees;?>,
-                        yaxis: 2,
+                        yaxis: 3,
                         color: '<?php echo self::COLOR; ?>',
                         points: {show: true, radius: 5, lineWidth: 2, fillColor: '#fff', fill: true},
                         lines: {show: true, lineWidth: 2, fill: false},
@@ -355,6 +355,15 @@ class Report extends \WC_Admin_Report {
                                     alignTicksWithAxis: 1,
                                     color: 'transparent',
                                     font: {color: "#aaa"}
+                                },
+                                {
+                                    position: "right",
+                                    min: 0,
+                                    tickDecimals: 2,
+                                    alignTicksWithAxis: 1,
+                                    color: 'transparent',
+                                    font: {color: "#aaa"},
+                                    autoscaleMargin: 5
                                 }
                             ],
                         }

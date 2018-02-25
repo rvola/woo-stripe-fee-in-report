@@ -284,6 +284,12 @@ class Report extends \WC_Admin_Report {
                     var series = [];
                     var current_series = main_chart.getData();
                     jQuery(current_series).each(function (i, value) {
+
+                        // Change Yaxis shipping.
+                        if (value.label === '<?php echo esc_js( __( 'Shipping amount', 'woocommerce' ) ) ?>') {
+                            value.yaxis = 3;
+                        }
+
                         series.push(value);
                     });
 

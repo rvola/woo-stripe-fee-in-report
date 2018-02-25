@@ -14,7 +14,7 @@ It's simple and it works.
 
 This section describes how to install the plugin and get it working.
 
-1. Upload the plugin files to the `/wp-content/plugins/woo-stripe-fee-report` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/woo-stripe-fee-in-report` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress.
 3. Enjoy !
 
@@ -27,7 +27,7 @@ This section describes how to install the plugin and get it working.
 
 ## Links
 
-* [**Changelog**](https://github.com/rvola/woo-stripe-fee-report/blob/master/CHANGELOG.md)
-* [**Download on WordPress**](https://wordpress.org/plugins/woo-stripe-fee-report/)
+* [**Changelog**](https://github.com/rvola/woo-stripe-fee-in-report/blob/master/CHANGELOG.md)
+* [**Download on WordPress**](https://wordpress.org/plugins/woo-stripe-fee-in-report/)
 
 

@@ -193,8 +193,8 @@ class Report extends \WC_Admin_Report {
 			self::COLOR,
 			$this->get_serie( 'stripe_fees' ),
 			sprintf(
-			// translators: %s is Stripe fees.
-				_x( '%s Stripe fees', 'number', 'woo-stripe-fee-report' ),
+			    // translators: %s is Stripe fees.
+				_x( '%s Stripe fees', 'number', 'woo-stripe-fee-in-report' ),
 				'<strong>' . wc_price( $this->report_data->total_stripe_fees ) . '</strong>'
 			)
 		);
@@ -229,7 +229,7 @@ class Report extends \WC_Admin_Report {
 	 */
 	public function chart_update_legend_placeholder() {
 		$update_legend = array(
-			$this->get_serie( 'net_order_amounts' ) => __( 'This is the sum of the order totals after any refunds and excluding shipping, taxes and Stripe fees.', 'woo-stripe-fee-report' ),
+			$this->get_serie( 'net_order_amounts' ) => __( 'This is the sum of the order totals after any refunds and excluding shipping, taxes and Stripe fees.', 'woo-stripe-fee-in-report' ),
 		);
 
 		echo '<script type="text/javascript">';
@@ -289,7 +289,7 @@ class Report extends \WC_Admin_Report {
 
                     // Stripe serie.
                     var stripe_series = {
-                        label: "<?php echo esc_js( __( 'Stripe fees', 'woo-stripe-fee-report' ) ) ?>",
+                        label: "<?php echo esc_js( __( 'Stripe fees', 'woo-stripe-fee-in-report' ) ) ?>",
                         data: <?php echo $stripe_fees;?>,
                         yaxis: 2,
                         color: '<?php echo self::COLOR; ?>',

@@ -1,9 +1,9 @@
 <?php
 /**
 Plugin Name:		    WooCommerce Stripe fee in Report
-Plugin URI:			    https://github.com/rvola/woo-stripe-fee-report
+Plugin URI:			    https://github.com/rvola/woo-stripe-fee-in-report
 
-Description:		    Shows Stripe charges in WooCommerce charts. Calculates a correct net total.
+Description:		    Shows Stripe fees in WooCommerce charts. Calculates a correct net total.
 
 Version:			    1.0.0
 Revision:			    2018-02-24
@@ -12,7 +12,7 @@ Creation:               2018-02-24
 Author:				    studio RVOLA
 Author URI:			    https://www.rvola.com
 
-Text Domain:		    woo-stripe-fee-report
+Text Domain:		    woo-stripe-fee-in-report
 Domain Path:		    /languages
 
 Requires at least:      4.4

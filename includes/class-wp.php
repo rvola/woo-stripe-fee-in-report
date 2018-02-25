@@ -56,7 +56,7 @@ class WP {
 	 */
 	public function load_languages() {
 
-		load_plugin_textdomain( 'woo-stripe-fee-report', false, dirname( __FILE__ ) . '/languages' );
+		load_plugin_textdomain( 'woo-stripe-fee-in-report', false, dirname( __FILE__ ) . '/languages' );
 	}
 
 	/**
@@ -68,12 +68,12 @@ class WP {
 	 * @return mixed
 	 */
 	public function plugin_row_meta( $plugin_meta, $plugin_file ) {
-		if ( plugin_basename( 'woo-stripe-fee-report/woo-stripe-fee-report.php' ) === $plugin_file ) {
+		if ( plugin_basename( 'woo-stripe-fee-in-report/woo-stripe-fee-in-report.php' ) === $plugin_file ) {
 			array_push(
 				$plugin_meta,
 				sprintf(
 					'<a href="https://www.paypal.me/rvola" target="_blank">%s</a>',
-					__( 'Donate', 'woo-stripe-fee-report' )
+					__( 'Donate', 'woo-stripe-fee-in-report' )
 				)
 			);
 		}

@@ -1,29 +1,29 @@
 <?php
 /**
-Plugin Name:		    WooCommerce Stripe fee in Report
-Plugin URI:			    https://github.com/rvola/woo-stripe-fee-in-report
-
-Description:		    Shows Stripe fees in WooCommerce charts. Calculates a correct net total.
-
-Version:			    1.0.1
-Revision:			    2018-02-25
-Creation:               2018-02-24
-
-Author:				    studio RVOLA
-Author URI:			    https://www.rvola.com
-
-Text Domain:		    woo-stripe-fee-in-report
-Domain Path:		    /languages
-
-Requires at least:      4.4
-Tested up to:           4.9
-Requires PHP:           5.3
-WC requires at least:   3.1.0
-WC tested up to:        3.3.0
-
-License:                GNU General Public License v3.0
-License URI:            https://www.gnu.org/licenses/gpl-3.0.html
-**/
+ * Plugin Name:             WooCommerce Stripe fee in Report
+ * Plugin URI:              https://github.com/rvola/woo-stripe-fee-in-report
+ *
+ * Description:             Shows Stripe fees in WooCommerce charts. Calculates a correct net total.
+ *
+ * Version:                 1.0.2
+ * Revision:                2018-03-01
+ * Creation:                2018-02-24
+ *
+ * Author:                  studio RVOLA
+ * Author URI:              https://www.rvola.com
+ *
+ * Text Domain:             woo-stripe-fee-in-report
+ * Domain Path:             /languages
+ *
+ * Requires at least:       4.4
+ * Tested up to:            4.9
+ * Requires PHP:            5.3
+ * WC requires at least:    3.1.0
+ * WC tested up to:         3.3.0
+ *
+ * License:                 GNU General Public License v3.0
+ * License URI:             https://www.gnu.org/licenses/gpl-3.0.html
+ **/
 
 namespace RVOLA\WOO\SFR;
 

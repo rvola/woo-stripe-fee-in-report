@@ -56,6 +56,7 @@ class WP {
 	public function load_languages() {
 
 		load_plugin_textdomain( 'woo-stripe-fee-in-report', false, dirname( __FILE__ ) . '/languages' );
+		load_plugin_textdomain( 'woo-stripe-fee-in-report', false, plugin_basename( WOOSFR_FILE ) . '/languages' );
 	}
 
 	/**
@@ -67,7 +68,7 @@ class WP {
 	 * @return mixed
 	 */
 	public function plugin_row_meta( $plugin_meta, $plugin_file ) {
-		if ( plugin_basename( 'woo-stripe-fee-in-report/woo-stripe-fee-in-report.php' ) === $plugin_file ) {
+		if ( plugin_basename( WOOSFR_FILE ) === $plugin_file ) {
 			array_push(
 				$plugin_meta,
 				sprintf(

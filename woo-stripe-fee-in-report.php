@@ -30,6 +30,7 @@ namespace RVOLA\WOO\SFR;
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+define( 'WOOSFR_FILE', __FILE__ );
 
 include_once ABSPATH . 'wp-admin/includes/plugin.php';
 // Check if WooCommerce and WooCommerce Gateway Stripe is loaded.
@@ -37,6 +38,6 @@ if (
 	is_plugin_active( 'woocommerce/woocommerce.php' )
 	&& is_plugin_active( 'woocommerce-gateway-stripe/woocommerce-gateway-stripe.php' )
 ) {
-	require_once dirname( __FILE__ ) . '/includes/class-wp.php';
+	require_once dirname( WOOSFR_FILE ) . '/includes/class-wp.php';
 	add_action( 'plugins_loaded', array( 'RVOLA\WOO\SFR\WP', 'instance' ), 10 );
 }

@@ -27,9 +27,14 @@ class Report extends \WC_Admin_Report {
 	 */
 	const COLOR = '#572ff8';
 	/**
-	 * Name of the meta key for Stripe fees.
+	 * Name of the meta key for Stripe fees (old and new).
 	 */
-	const META_NAME_FEE = 'Stripe Fee';
+	const LEGACY_META_NAME_FEE = 'Stripe Fee';
+	const META_NAME_FEE = '_stripe_fee';
+	/**
+	 * Name of tweak for customize query
+	 */
+	const TWEAK_REQ = '___woosfr___';
 
 	/**
 	 * Chart data table.
@@ -106,12 +111,12 @@ class Report extends \WC_Admin_Report {
 		// Search Stripe fees values.
 		$stripe_fees = $this->get_order_report_data( array(
 			'data'         => array(
-				'___stripe_fee___' => array(
+				self::TWEAK_REQ => array(
 					'type'     => 'meta',
 					'function' => 'SUM',
 					'name'     => 'total',
 				),
-				'post_date'        => array(
+				'post_date'     => array(
 					'type'     => 'post_data',
 					'function' => '',
 					'name'     => 'post_date',
@@ -138,7 +143,8 @@ class Report extends \WC_Admin_Report {
 	}
 
 	/**
-	 * Unfortunately, the post_meta that stores the Stripe Fee uses a space.
+	 * Unfortunately, the Stripe Gateway extension used meta_key in the past whose name contained a space,
+	 * now it uses underscores, but did not put any updater to update the old data.
 	 * With this method, the query is modified to be operational.
 	 *
 	 * @param array $query Request.
@@ -147,11 +153,11 @@ class Report extends \WC_Admin_Report {
 	 */
 	public function clean_query_get_order( $query ) {
 
-		preg_match( '/___stripe_fee___/', $query['select'], $match );
+		preg_match( '/' . self::TWEAK_REQ . '/', $query['select'], $match );
 		if ( $match && is_array( $query ) ) {
-			$query['select'] = str_replace( '___stripe_fee___', 'key', $query['select'] );
-			$query['join']   = str_replace( 'meta____stripe_fee___', 'meta_key', $query['join'] );
-			$query['join']   = str_replace( "'___stripe_fee___'", "'" . self::META_NAME_FEE . "'", $query['join'] );
+			$query['select'] = str_replace( self::TWEAK_REQ, 'key', $query['select'] );
+			$query['join']   = str_replace( 'meta_' . self::TWEAK_REQ, 'meta_key', $query['join'] );
+			$query['join']   = str_replace( "= '" . self::TWEAK_REQ . "'", "IN ('" . self::META_NAME_FEE . "','" . self::LEGACY_META_NAME_FEE . "')", $query['join'] );
 		}
 
 		return $query;

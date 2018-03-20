@@ -30,6 +30,10 @@ class Report extends \WC_Admin_Report {
 	 * Name of the meta key for Stripe fees.
 	 */
 	const META_NAME_FEE = 'Stripe Fee';
+	/**
+	 * Name of tweak for customize query
+	 */
+	const TWEAK_REQ = '___woosfr___';
 
 	/**
 	 * Chart data table.
@@ -106,12 +110,12 @@ class Report extends \WC_Admin_Report {
 		// Search Stripe fees values.
 		$stripe_fees = $this->get_order_report_data( array(
 			'data'         => array(
-				'___stripe_fee___' => array(
+				self::TWEAK_REQ => array(
 					'type'     => 'meta',
 					'function' => 'SUM',
 					'name'     => 'total',
 				),
-				'post_date'        => array(
+				'post_date'     => array(
 					'type'     => 'post_data',
 					'function' => '',
 					'name'     => 'post_date',
@@ -147,11 +151,11 @@ class Report extends \WC_Admin_Report {
 	 */
 	public function clean_query_get_order( $query ) {
 
-		preg_match( '/___stripe_fee___/', $query['select'], $match );
+		preg_match( '/' . self::TWEAK_REQ . '/', $query['select'], $match );
 		if ( $match && is_array( $query ) ) {
-			$query['select'] = str_replace( '___stripe_fee___', 'key', $query['select'] );
-			$query['join']   = str_replace( 'meta____stripe_fee___', 'meta_key', $query['join'] );
-			$query['join']   = str_replace( "'___stripe_fee___'", "'" . self::META_NAME_FEE . "'", $query['join'] );
+			$query['select'] = str_replace( self::TWEAK_REQ, 'key', $query['select'] );
+			$query['join']   = str_replace( 'meta_' . self::TWEAK_REQ, 'meta_key', $query['join'] );
+			$query['join']   = str_replace( self::TWEAK_REQ, self::META_NAME_FEE, $query['join'] );
 		}
 
 		return $query;

@@ -5,8 +5,8 @@
  *
  * Description:             Shows Stripe fees in WooCommerce charts. Calculates a correct net total.
  *
- * Version:                 1.0.2
- * Revision:                2018-03-01
+ * Version:                 1.1.0
+ * Revision:                2018-03-20
  * Creation:                2018-02-24
  *
  * Author:                  studio RVOLA

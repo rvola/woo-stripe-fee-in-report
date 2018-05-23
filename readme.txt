@@ -5,7 +5,7 @@ Tags: stripe, woocommerce, woocommerce-plugin, woocommerce-extension, wordpress-
 Requires PHP: 5.3
 Requires at least: 4.4
 Tested up to: 4.9
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -40,6 +40,9 @@ We’re glad you want to help us improve **WooCommerce Stripe fee in Report**!
 The GIT repository is available here [https://github.com/rvola/woo-stripe-fee-in-report](https://github.com/rvola/woo-stripe-fee-in-report)
 
 == Changelog ==
+
+= 1.1.1 / 2018-05-23 =
+* ✔︎ Compatibility WooCommerce 3.4.0
 
 = 1.1.0 / 2018-03-20 =
 * Updated meta_key name query (Stripe Gateway 4.1)

@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.1](https://github.com/rvola/woo-stripe-fee-in-report/tree/1.1.1) - 2018-05-23
+[Full Changelog](https://github.com/rvola/woo-stripe-fee-in-report/compare/1.1.0...1.1.1)
+
+* ✔︎ Compatibility WooCommerce 3.4.0
+
 ## [1.1.0](https://github.com/rvola/woo-stripe-fee-in-report/tree/1.1.0) - 2018-03-20
 [Full Changelog](https://github.com/rvola/woo-stripe-fee-in-report/compare/1.0.2...1.1.0)
 

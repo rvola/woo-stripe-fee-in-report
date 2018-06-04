@@ -137,7 +137,7 @@ class Report extends \WC_Admin_Report {
 		$this->report_data->total_stripe_fees = wc_format_decimal( array_sum( wp_list_pluck( $this->report_data->stripe_fees, 'total' ) ), 2 );
 
 		// Update Net Sale - Stripe fees.
-		$this->report_data->net_sales = wc_format_decimal( $this->report_data->total_sales - $this->report_data->total_shipping - $this->report_data->total_stripe_fees - max( 0, $this->report_data->total_tax ) - max( 0, $this->report_data->total_shipping_tax ) - max( 0, $this->report_data->total_stripe_fees ), 2 );
+		$this->report_data->net_sales = wc_format_decimal( $this->report_data->total_sales - $this->report_data->total_shipping - max( 0, $this->report_data->total_tax ) - max( 0, $this->report_data->total_shipping_tax ) - max( 0, $this->report_data->total_stripe_fees ), 2 );
 
 		return $this->report_data;
 	}

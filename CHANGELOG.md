@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.2](https://github.com/rvola/woo-stripe-fee-in-report/tree/1.1.2) - 2018-06-04
+[Full Changelog](https://github.com/rvola/woo-stripe-fee-in-report/compare/1.1.1...1.1.2)
+
+* Fix - Error in calculating net total #2
+
 ## [1.1.1](https://github.com/rvola/woo-stripe-fee-in-report/tree/1.1.1) - 2018-05-23
 [Full Changelog](https://github.com/rvola/woo-stripe-fee-in-report/compare/1.1.0...1.1.1)
 

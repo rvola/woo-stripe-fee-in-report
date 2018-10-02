@@ -5,7 +5,7 @@ Tags: stripe, woocommerce, woocommerce-plugin, woocommerce-extension, wordpress-
 Requires PHP: 5.3
 Requires at least: 4.4
 Tested up to: 4.9
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -41,11 +41,14 @@ The GIT repository is available here [https://github.com/rvola/woo-stripe-fee-in
 
 == Changelog ==
 
+= 1.1.3 / 2018-10-02 =
+* ✔︎ Compatibility WooCommerce 3.5
+
 = 1.1.2 / 2018-06-04 =
 * Fix - Error in calculating net total #2
 
 = 1.1.1 / 2018-05-23 =
-* ✔︎ Compatibility WooCommerce 3.4.0
+* ✔︎ Compatibility WooCommerce 3.4
 
 = 1.1.0 / 2018-03-20 =
 * Updated meta_key name query (Stripe Gateway 4.1)
@@ -59,7 +62,6 @@ The GIT repository is available here [https://github.com/rvola/woo-stripe-fee-in
 * Change yaxis for shipping
 * Change yaxis for Stripe fees
 * Rename path (plugin submission)
-
 
 = 1.0.0 / 2018-02-24 =
 * Launch

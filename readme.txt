@@ -4,8 +4,8 @@ Donate link: https://www.paypal.me/rvola
 Tags: stripe, woocommerce, woocommerce-plugin, woocommerce-extension, wordpress-plugin, wordpress, chart, reporting, report, stripe-payments, stripe-gateway
 Requires PHP: 5.3
 Requires at least: 4.4
-Tested up to: 4.9
 Stable tag: 1.1.3
+Tested up to: 5.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 

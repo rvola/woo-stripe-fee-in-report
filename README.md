@@ -20,7 +20,7 @@ This section describes how to install the plugin and get it working.
 
 ## Requirement
 
-* PHP minimal: **5.3**
+* PHP minimal: **7.0**
 * WordPress minimal: **4.4**
 * WooCommerce minimal : **3.1**
 * WooCommerce Gateway Stripe minimal : **3.0**

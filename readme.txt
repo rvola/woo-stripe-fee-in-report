@@ -2,7 +2,7 @@
 Contributors: rvola
 Donate link: https://www.paypal.me/rvola
 Tags: stripe, woocommerce, woocommerce-plugin, woocommerce-extension, wordpress-plugin, wordpress, chart, reporting, report, stripe-payments, stripe-gateway
-Requires PHP: 5.3
+Requires PHP: 7.0
 Requires at least: 4.4
 Stable tag: 1.1.3
 Tested up to: 5.0
@@ -28,7 +28,7 @@ This section describes how to install the plugin and get it working.
 
 == Requirement ==
 
-* PHP minimal: **5.3**
+* PHP minimal: **7.0**
 * WordPress minimal: **4.4**
 * WooCommerce minimal : **3.1.0**
 * WooCommerce Gateway Stripe minimal : **3.0.0**

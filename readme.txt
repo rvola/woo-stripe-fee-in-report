@@ -16,7 +16,7 @@ Shows Stripe fees in WooCommerce charts. Calculates a correct net total.
 **WooCommerce Stripe fee in Report** is a small plugin that will allow you to quickly visualize in the WooCommerce graph, the state of your comissions Stripe !!
 It's simple and it works.
 
-[**GitHub**](https://github.com/rvola/woo-stripe-fee-in-rweport) | [**Donate**](https://www.paypal.me/rvola)
+[**GitHub**](https://github.com/rvola/woo-stripe-fee-in-report) | [**Donate**](https://www.paypal.me/rvola)
 
 == Installation ==
 

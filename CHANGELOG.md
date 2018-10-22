@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.4](https://github.com/rvola/woo-stripe-fee-in-report/tree/1.1.4) - 2018-10-22
+[Full Changelog](https://github.com/rvola/woo-stripe-fee-in-report/compare/1.1.3...1.1.4)
+
+* End support PHP 5.6
+* ✔︎ Check compatbility WP 5.0
+
 ## [1.1.3](https://github.com/rvola/woo-stripe-fee-in-report/tree/1.1.3) - 2018-10-02
 [Full Changelog](https://github.com/rvola/woo-stripe-fee-in-report/compare/1.1.2...1.1.3)
 

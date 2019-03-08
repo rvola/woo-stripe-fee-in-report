@@ -394,6 +394,124 @@ class Report extends \WC_Admin_Report {
                     }
                 );
 
+	            jQuery( '.export_csv' ).click( function() {
+		            var exclude_series = jQuery( this ).data( 'exclude_series' ) || '';
+		            exclude_series    = exclude_series.toString();
+		            exclude_series    = exclude_series.split( ',' );
+		            var xaxes_label   = jQuery( this ).data( 'xaxes' );
+		            var groupby       = jQuery( this ) .data( 'groupby' );
+		            var index_type    = jQuery( this ).data( 'index_type' );
+		            var export_format = jQuery( this ).data( 'export' );
+		            var csv_data      = 'data:text/csv;charset=utf-8,\uFEFF';
+		            var s, series_data, d;
+
+		            if ( 'table' === export_format ) {
+
+			            jQuery( this ).offsetParent().find( 'thead tr,tbody tr' ).each( function() {
+				            jQuery( this ).find( 'th, td' ).each( function() {
+					            var value = jQuery( this ).text();
+					            value = value.replace( '[?]', '' ).replace( '#', '' );
+					            csv_data += '"' + value + '"' + ',';
+				            });
+				            csv_data = csv_data.substring( 0, csv_data.length - 1 );
+				            csv_data += '\n';
+			            });
+
+			            jQuery( this ).offsetParent().find( 'tfoot tr' ).each( function() {
+				            jQuery( this ).find( 'th, td' ).each( function() {
+					            var value = jQuery( this ).text();
+					            value = value.replace( '[?]', '' ).replace( '#', '' );
+					            csv_data += '"' + value + '"' + ',';
+					            if ( jQuery( this ).attr( 'colspan' ) > 0 ) {
+						            for ( i = 1; i < jQuery(this).attr('colspan'); i++ ) {
+							            csv_data += '"",';
+						            }
+					            }
+				            });
+				            csv_data = csv_data.substring( 0, csv_data.length - 1 );
+				            csv_data += '\n';
+			            });
+
+		            } else {
+
+			            if ( ! window.main_chart ) {
+				            return false;
+			            }
+
+			            var the_series = stripe_main_char.getData();
+			            var series     = [];
+			            csv_data      += '"' + xaxes_label + '",';
+
+			            jQuery.each( the_series, function( index, value ) {
+				            if ( ! exclude_series || jQuery.inArray( index.toString(), exclude_series ) === -1 ) {
+					            series.push( value );
+				            }
+			            });
+
+			            // CSV Headers
+			            for ( s = 0; s < series.length; ++s ) {
+				            csv_data += '"' + series[s].label + '",';
+			            }
+
+			            csv_data = csv_data.substring( 0, csv_data.length - 1 );
+			            csv_data += '\n';
+
+			            // Get x axis values
+			            var xaxis = {};
+
+			            for ( s = 0; s < series.length; ++s ) {
+				            series_data = series[s].data;
+				            for ( d = 0; d < series_data.length; ++d ) {
+					            xaxis[series_data[d][0]] = [];
+					            // Zero values to start
+					            for ( var i = 0; i < series.length; ++i ) {
+						            xaxis[series_data[d][0]].push(0);
+					            }
+				            }
+			            }
+
+			            // Add chart data
+			            for ( s = 0; s < series.length; ++s ) {
+				            series_data = series[s].data;
+				            for ( d = 0; d < series_data.length; ++d ) {
+					            xaxis[series_data[d][0]][s] = series_data[d][1];
+				            }
+			            }
+
+			            // Loop data and output to csv string
+			            jQuery.each( xaxis, function( index, value ) {
+				            var date = new Date( parseInt( index, 10 ) );
+
+				            if ( 'none' === index_type ) {
+					            csv_data += '"' + index + '",';
+				            } else {
+					            if ( groupby === 'day' ) {
+						            csv_data += '"' + date.getUTCFullYear() + '-' + parseInt( date.getUTCMonth() + 1, 10 ) + '-' + date.getUTCDate() + '",';
+					            } else {
+						            csv_data += '"' + date.getUTCFullYear() + '-' + parseInt( date.getUTCMonth() + 1, 10 ) + '",';
+					            }
+				            }
+
+				            for ( var d = 0; d < value.length; ++d ) {
+					            var val = value[d];
+
+					            if ( Math.round( val ) !== val ) {
+						            val = parseFloat( val );
+						            val = val.toFixed( 2 );
+					            }
+
+					            csv_data += '"' + val + '",';
+				            }
+				            csv_data = csv_data.substring( 0, csv_data.length - 1 );
+				            csv_data += '\n';
+			            } );
+		            }
+
+		            // Set data as href and return
+		            jQuery( this ).attr( 'href', encodeURI( csv_data ) );
+		            return true;
+	            });
+
             });
         </script>
 		<?php

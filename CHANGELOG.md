@@ -1,7 +1,14 @@
 # Changelog
 
+## [1.2.1](https://github.com/rvola/woo-stripe-fee-in-report/tree/1.2.1) - 2019-04-03
+[Full Changelog](https://github.com/rvola/woo-stripe-fee-in-report/compare/1.2.0...1.2.1)
+
+* ✔︎ Compatibility WP 5.2
+* ✔︎ Compatibility WOO 3.6
+
 ## [1.2.0](https://github.com/rvola/woo-stripe-fee-in-report/tree/1.2.0) - 2019-03-08
 [Full Changelog](https://github.com/rvola/woo-stripe-fee-in-report/compare/1.1.4...1.2.0)
+
 * Add data to CSV export
 * ✔ Check compatbility WP 5.1
 * FIX / url GitHub

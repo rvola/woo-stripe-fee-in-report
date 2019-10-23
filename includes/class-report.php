@@ -195,9 +195,8 @@ class Report extends \WC_Admin_Report {
 			return;
 		}
 		$link = sprintf(
-			'<li style="border-color: %1$s" class="highlight_series" data-series="%2$d">%3$s</li>',
+			'<li style="border-color: %s" class="highlight_series" data-series="9">%s</li>',
 			self::COLOR,
-			$this->get_serie( 'stripe_fees' ),
 			sprintf(
 			    // translators: %s is Stripe fees.
 				_x( '%s Stripe fees', 'number', 'woo-stripe-fee-in-report' ),
@@ -215,29 +214,13 @@ class Report extends \WC_Admin_Report {
 	}
 
 	/**
-	 * Retrieves the key number of the table to add the values to the chart.
-	 *
-	 * @param string $name The name of the key to search for.
-	 *
-	 * @return int
-	 */
-	private function get_serie( $name ) {
-		if ( ! $this->chart_data ) {
-			return false;
-		}
-
-		return array_search( $name, array_keys( $this->chart_data ), true ) - 1;
-	}
-
-	/**
 	 * Replaces hover text for legend.
 	 * In our case, I use it to change the text concerning the net commands taking into account the Stripes fees.
 	 */
 	public function chart_update_legend_placeholder() {
 		$update_legend = array(
-			$this->get_serie( 'net_order_amounts' ) => __( 'This is the sum of the order totals after any refunds and excluding shipping, taxes and Stripe fees.', 'woo-stripe-fee-in-report' ),
+			7 => esc_html__( 'This is the sum of the order totals after any refunds and excluding shipping, taxes and Stripe fees.', 'woo-stripe-fee-in-report' ), // Net sales amount
 		);
-
 		echo '<script type="text/javascript">';
 		foreach ( $update_legend as $serie => $text ) {
 			printf(
@@ -301,7 +284,7 @@ class Report extends \WC_Admin_Report {
 
                     // Stripe serie.
                     var stripe_series = {
-                        label: "<?php echo esc_js( __( 'Stripe fees', 'woo-stripe-fee-in-report' ) ) ?>",
+                        label: "<?php echo esc_js( esc_html__( 'Stripe fees', 'woo-stripe-fee-in-report' ) ) ?>",
                         data: <?php echo $stripe_fees;?>,
                         yaxis: 3,
                         color: '<?php echo self::COLOR; ?>',

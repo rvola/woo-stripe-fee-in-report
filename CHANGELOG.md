@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.2.2](https://github.com/rvola/woo-stripe-fee-in-report/tree/1.2.2) - 2019-10-23
+[Full Changelog](https://github.com/rvola/woo-stripe-fee-in-report/compare/1.2.1...1.2.2)
+
+* FIX / Load languages files
+* escape i18n
+* FIX / Series incorrect for legend + escape i18n
+* ✔︎ Compatibility WOO 3.8
+* ✔︎ Compatibility WP 5.3
+
 ## [1.2.1](https://github.com/rvola/woo-stripe-fee-in-report/tree/1.2.1) - 2019-04-03
 [Full Changelog](https://github.com/rvola/woo-stripe-fee-in-report/compare/1.2.0...1.2.1)
 

@@ -5,8 +5,8 @@
  *
  * Description:             Shows Stripe fees in WooCommerce charts. Calculates a correct net total.
  *
- * Version:                 1.2.1
- * Revision:                2019-04-03
+ * Version:                 1.2.2
+ * Revision:                2019-10-23
  * Creation:                2018-02-24
  *
  * Author:                  studio RVOLA
@@ -16,10 +16,10 @@
  * Domain Path:             /languages
  *
  * Requires at least:       4.4
- * Tested up to:            5.2
+ * Tested up to:            5.3
  * Requires PHP:            7.0
  * WC requires at least:    3.1
- * WC tested up to:         3.6
+ * WC tested up to:         3.8
  *
  * License:                 GNU General Public License v3.0
  * License URI:             https://www.gnu.org/licenses/gpl-3.0.html

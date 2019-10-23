@@ -4,8 +4,8 @@ Donate link: https://www.paypal.me/rvola
 Tags: stripe, woocommerce, woocommerce-plugin, woocommerce-extension, wordpress-plugin, wordpress, chart, reporting, report, stripe-payments, stripe-gateway
 Requires PHP: 7.0
 Requires at least: 4.4
-Tested up to: 5.2
-Stable tag: 1.2.1
+Tested up to: 5.3
+Stable tag: 1.2.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -40,6 +40,13 @@ We’re glad you want to help us improve **WooCommerce Stripe fee in Report**!
 The GIT repository is available here [https://github.com/rvola/woo-stripe-fee-in-report](https://github.com/rvola/woo-stripe-fee-in-report)
 
 == Changelog ==
+
+= 1.2.2 / 2019-10-23 =
+* FIX / Load languages files
+* escape i18n
+* FIX / Series incorrect for legend + escape i18n
+* ✔︎ Compatibility WOO 3.8
+* ✔︎ Compatibility WP 5.3
 
 = 1.2.1 / 2019-04-03 =
 * ✔︎ Compatibility WP 5.2

@@ -55,8 +55,7 @@ class WP {
 	 */
 	public function load_languages() {
 
-		load_plugin_textdomain( 'woo-stripe-fee-in-report', false, dirname( __FILE__ ) . '/languages' );
-		load_plugin_textdomain( 'woo-stripe-fee-in-report', false, plugin_basename( WOOSFR_FILE ) . '/languages' );
+		load_plugin_textdomain( 'woo-stripe-fee-in-report', false, plugin_basename( dirname( WOOCAO_FILE ) ) . '/languages' );
 	}
 
 	/**

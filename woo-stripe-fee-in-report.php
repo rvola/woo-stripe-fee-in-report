@@ -16,7 +16,7 @@
  * Domain Path:             /languages
  *
  * Requires at least:       4.4
- * Tested up to:            5.2
+ * Tested up to:            5.3
  * Requires PHP:            7.0
  * WC requires at least:    3.1
  * WC tested up to:         3.6

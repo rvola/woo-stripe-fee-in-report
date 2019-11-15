@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.2.3](https://github.com/rvola/woo-stripe-fee-in-report/tree/1.2.3) - 2019-11-15
+[Full Changelog](https://github.com/rvola/woo-stripe-fee-in-report/compare/1.2.2...1.2.3)
+
+* FIX / Incorrect call folder
+
 ## [1.2.2](https://github.com/rvola/woo-stripe-fee-in-report/tree/1.2.2) - 2019-10-23
 [Full Changelog](https://github.com/rvola/woo-stripe-fee-in-report/compare/1.2.1...1.2.2)
 

@@ -5,7 +5,7 @@ Tags: stripe, woocommerce, woocommerce-plugin, woocommerce-extension, wordpress-
 Requires PHP: 7.0
 Requires at least: 4.4
 Tested up to: 5.3
-Stable tag: 1.2.3
+Stable tag: 1.2.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -41,23 +41,10 @@ The GIT repository is available here [https://github.com/rvola/woo-stripe-fee-in
 
 == Changelog ==
 
+= 1.2.4 / 2020-01-22 =
+* ✔︎ Compatibility WOO 3.9
+
 = 1.2.3 / 2019-11-15 =
 * FIX / Incorrect call folder
 
-= 1.2.2 / 2019-10-23 =
-* FIX / Load languages files
-* escape i18n
-* FIX / Series incorrect for legend + escape i18n
-* ✔︎ Compatibility WOO 3.8
-* ✔︎ Compatibility WP 5.3
-
-= 1.2.1 / 2019-04-03 =
-* ✔︎ Compatibility WP 5.2
-* ✔︎ Compatibility WOO 3.6
-
-= 1.2.0 / 2019-03-08 =
-* Add data to CSV export
-* ✔ Check compatbility WP 5.1
-* FIX / url GitHub
-
-[Complete Changelog](https://github.com/rvola/woo-stripe-fee-in-report/blob/master/CHANGELOG.md).
+[_More changelog_](https://github.com/rvola/woo-stripe-fee-in-report/blob/master/CHANGELOG.md).).

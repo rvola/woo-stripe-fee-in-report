@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.6](https://github.com/rvola/woo-stripe-fee-in-report/tree/1.2.6) - 2020-08-24
+[Full Changelog](https://github.com/rvola/woo-stripe-fee-in-report/compare/1.2.5...1.2.6)
+
+* ✔︎ Compatibility WOO 4.4
+* ✔︎ Compatibility WP 5.5
+
 ## [1.2.5](https://github.com/rvola/woo-stripe-fee-in-report/tree/1.2.5) - 2020-03-09
 [Full Changelog](https://github.com/rvola/woo-stripe-fee-in-report/compare/1.2.4...1.2.5)
 
